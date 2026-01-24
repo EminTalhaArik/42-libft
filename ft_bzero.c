@@ -6,14 +6,14 @@
 /*   By: emiarik <emiarik@student.42kocaeli.com.tr  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 22:50:13 by emiarik           #+#    #+#             */
-/*   Updated: 2026/01/20 23:52:56 by emiarik          ###   ########.fr       */
+/*   Updated: 2026/01/24 20:18:29 by emiarik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	*ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, '\0', n);
 }

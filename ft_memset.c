@@ -6,11 +6,12 @@
 /*   By: emiarik <emiarik@student.42kocaeli.com.tr  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 20:06:21 by emiarik           #+#    #+#             */
-/*   Updated: 2026/01/20 22:57:32 by emiarik          ###   ########.fr       */
+/*   Updated: 2026/01/24 20:16:29 by emiarik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+#include "libft.h"
 
 void	*ft_memset(void *ptr, int c, size_t len)
 {
