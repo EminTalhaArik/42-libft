@@ -6,13 +6,15 @@
 /*   By: emiarik <emiarik@student.42kocaeli.com.tr  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/17 19:24:05 by emiarik           #+#    #+#             */
-/*   Updated: 2026/01/17 19:26:24 by emiarik          ###   ########.fr       */
+/*   Updated: 2026/01/30 17:11:12 by emiarik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *characters)
+#include "libft.h"
+
+size_t	ft_strlen(const	char *characters)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	while (characters[i])
