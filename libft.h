@@ -6,7 +6,7 @@
 /*   By: emiarik <emiarik@student.42kocaeli.com.tr  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/17 17:49:18 by emiarik           #+#    #+#             */
-/*   Updated: 2026/01/30 17:11:41 by emiarik          ###   ########.fr       */
+/*   Updated: 2026/01/30 17:32:23 by emiarik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 
 # include <stddef.h>
 
+int		ft_toupper(int character);
+int		ft_tolower(int character);
 int		ft_isalpha(unsigned int character);
 int		ft_isdigit(unsigned int character);
 int		ft_isalnum(unsigned int character);
