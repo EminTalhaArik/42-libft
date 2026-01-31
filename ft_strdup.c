@@ -26,23 +26,3 @@ char	*ft_strdup(const char *s)
 	ft_memcpy(str, s, arr_len);
 	return (str);
 }
-
-#include <string.h>
-#include <stdio.h>
-
-int	main(void)
-{
-	char	*s;
-
-	s = strdup("Merhaba");
-	printf("%s", s);
-	free(s);
-	printf("\n");
-	s = ft_strdup("Merhaba bro");
-	printf("%s", s);
-	free(s);
-
-	s = ft_strdup("");
-	printf("%s", s);
-	free(s);
-}
