@@ -21,6 +21,7 @@ char	*ft_strrchr(const char *s, int c);
 int		ft_toupper(int character);
 int		ft_tolower(int character);
 int		ft_strncmp(const char *s1, const char *s2, unsigned int n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_isalpha(unsigned int character);
 int		ft_isdigit(unsigned int character);
 int		ft_isalnum(unsigned int character);
