@@ -6,12 +6,11 @@
 /*   By: emiarik <emiarik@student.42kocaeli.com.tr  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/24 20:18:36 by emiarik           #+#    #+#             */
-/*   Updated: 2026/01/25 18:42:56 by emiarik          ###   ########.fr       */
+/*   Updated: 2026/01/30 21:30:33 by emiarik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
-#include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
