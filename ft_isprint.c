@@ -6,15 +6,15 @@
 /*   By: emiarik <emiarik@student.42kocaeli.com.tr  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/17 19:19:21 by emiarik           #+#    #+#             */
-/*   Updated: 2026/01/30 21:25:39 by emiarik          ###   ########.fr       */
+/*   Updated: 2026/01/31 05:10:20 by emiarik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(unsigned int character)
+int	ft_isprint(int character)
 {
-	if (ft_isalnum(character) || 32)
+	if (ft_isalnum(character) == 32)
 	{
 		return (1);
 	}

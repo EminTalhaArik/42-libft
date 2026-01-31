@@ -6,11 +6,11 @@
 /*   By: emiarik <emiarik@student.42kocaeli.com.tr  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/17 17:11:59 by emiarik           #+#    #+#             */
-/*   Updated: 2026/01/17 17:13:28 by emiarik          ###   ########.fr       */
+/*   Updated: 2026/01/31 05:08:12 by emiarik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(unsigned int character)
+int	ft_isdigit(int character)
 {
 	if (!(character >= '0' && character <= '9'))
 	{

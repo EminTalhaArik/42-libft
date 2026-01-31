@@ -6,13 +6,13 @@
 /*   By: emiarik <emiarik@student.42kocaeli.com.tr  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/17 18:02:53 by emiarik           #+#    #+#             */
-/*   Updated: 2026/01/17 18:31:50 by emiarik          ###   ########.fr       */
+/*   Updated: 2026/01/31 05:10:11 by emiarik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(unsigned int character)
+int	ft_isalnum(int character)
 {
 	if (ft_isdigit(character) || ft_isalpha(character))
 	{

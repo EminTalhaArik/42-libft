@@ -6,13 +6,13 @@
 /*   By: emiarik <emiarik@student.42kocaeli.com.tr  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 17:41:20 by emiarik           #+#    #+#             */
-/*   Updated: 2026/01/30 18:09:13 by emiarik          ###   ########.fr       */
+/*   Updated: 2026/01/31 04:33:41 by emiarik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strchar(const char *s, int c)
+char	*ft_strchar(const char *s, int c)
 {
 	size_t	s_length;
 	size_t	i;
@@ -27,5 +27,5 @@ char	*strchar(const char *s, int c)
 		}
 		i++;
 	}
-	return ('\0');
+	return (NULL);
 }
