@@ -70,7 +70,7 @@ To use the `libft` library in your projects, you need to compile it first:
 
 
 ## Author
-[Emin](https://github.com/emin)
+[Emin](https://github.com/EminTalhaArik)
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details (if you choose to add one).
