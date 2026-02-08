@@ -14,7 +14,7 @@
 #include <stddef.h>
 #include <stdlib.h>
 
-int	check_set_contains(char const character, char const *set)
+static int	check_set_contains(char const character, char const *set)
 {
 	size_t	i;
 
@@ -28,7 +28,7 @@ int	check_set_contains(char const character, char const *set)
 	return (0);
 }
 
-char	*trim_string(char const *s1, size_t start_point, size_t end_point)
+static char	*trim_string(char const *s1, size_t start_point, size_t end_point)
 {
 	char	*str;
 	size_t	i;

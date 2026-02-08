@@ -13,7 +13,7 @@
 #include "libft.h"
 #include <stdlib.h>
 
-size_t	count_words(const char *s, char c)
+static size_t	count_words(const char *s, char c)
 {
 	size_t	count;
 	int		in_word;
@@ -34,7 +34,7 @@ size_t	count_words(const char *s, char c)
 	return (count);
 }
 
-char	*get_word(const char *s, char c)
+static char	*get_word(const char *s, char c)
 {
 	size_t	len;
 	char	*word;
@@ -49,7 +49,7 @@ char	*get_word(const char *s, char c)
 	return (word);
 }
 
-void	*make_free_words(char **array, size_t size)
+static void	*make_free_words(char **array, size_t size)
 {
 	size_t	i;
 

@@ -13,7 +13,7 @@
 #include "libft.h"
 #include <stdlib.h>
 
-size_t	count_digits(long num)
+static size_t	count_digits(long num)
 {
 	int	digits;
 
@@ -30,7 +30,7 @@ size_t	count_digits(long num)
 	return (digits);
 }
 
-size_t	calculate_len(long n)
+static size_t	calculate_len(long n)
 {
 	size_t	len;
 
