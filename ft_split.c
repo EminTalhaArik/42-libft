@@ -1,42 +1,7 @@
-<<<<<<< HEAD
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: emiarik <emiarik@student.42kocaeli.com.tr  +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/04 19:09:00 by emiarik           #+#    #+#             */
-/*   Updated: 2026/02/04 19:36:16 by emiarik          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-=======
->>>>>>> 3bad86e (full)
 
 #include "libft.h"
 #include <stdlib.h>
 
-<<<<<<< HEAD
-size_t	count_letter(char *s, char c)
-{
-	size_t	i;
-	size_t	letter_count;
-
-	i = 0;
-	letter_count = 1;
-	while (s[i])
-	{
-		if (s[i] == c)
-		{
-			letter_count++;
-		}
-		i++;
-	}
-	return (letter_count);
-}
-
-size_t	count_text(char *s, char c)
-=======
 size_t	count_words(const char *s, char c)
 {
 	size_t	count;
@@ -74,34 +39,20 @@ char	*get_word(const char *s, char c)
 }
 
 void	make_free_words(char **array, size_t size)
->>>>>>> 3bad86e (full)
 {
 	size_t	i;
 
 	i = 0;
-<<<<<<< HEAD
-	while (s[i] && s[i] != c)
-	{
-		i++;
-	}
-	return (i);
-=======
 	while (i < size)
 	{
 		free(array[i]);
 		i++;
 	}
 	free(array);
->>>>>>> 3bad86e (full)
 }
 
 char	**ft_split(char const *s, char c)
 {
-<<<<<<< HEAD
-	char **str_all;
-	
-	str_all = malloc(sizeof(char *) * count_letter(s, c))
-=======
 	char	**array;
 	size_t	i;
 	size_t	word_count;
@@ -129,5 +80,4 @@ char	**ft_split(char const *s, char c)
 	}
 	array[i] = NULL;
 	return (array);
->>>>>>> 3bad86e (full)
 }
