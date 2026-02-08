@@ -49,7 +49,7 @@ char	*get_word(const char *s, char c)
 	return (word);
 }
 
-void	make_free_words(char **array, size_t size)
+void	*make_free_words(char **array, size_t size)
 {
 	size_t	i;
 
@@ -60,29 +60,29 @@ void	make_free_words(char **array, size_t size)
 		i++;
 	}
 	free(array);
+	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**array;
 	size_t	i;
+	size_t	word_count;
 
 	if (!s)
 		return (NULL);
-	array = (char **)malloc(sizeof(char *) * (count_words(s, c) + 1));
+	word_count = count_words(s, c);
+	array = (char **)malloc(sizeof(char *) * (word_count + 1));
 	if (!array)
 		return (NULL);
 	i = 0;
-	while (i < count_words(s, c))
+	while (i < word_count)
 	{
 		while (*s == c)
 			s++;
 		array[i] = get_word(s, c);
 		if (!array[i])
-		{
-			make_free_words(array, i);
-			return (NULL);
-		}
+			return (make_free_words(array, i));
 		while (*s && *s != c)
 			s++;
 		i++;

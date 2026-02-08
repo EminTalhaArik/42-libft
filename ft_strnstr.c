@@ -14,7 +14,7 @@
 
 static size_t	find_my_keyword(char *now, const char *little)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (little[i])
@@ -40,12 +40,9 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	len_little = ft_strlen(little);
 	if (len_little == 0)
 		return ((char *)big);
-	if (len < len_little)
-		return (NULL);
 	if (len != 0)
 	{
-		while (i <= (len - len_little)
-			&& big[i])
+		while (big[i] && (i + len_little) <= len)
 		{
 			if (find_my_keyword((char *)&big[i], little) == len_little)
 			{
