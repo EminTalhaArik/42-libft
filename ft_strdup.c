@@ -20,9 +20,9 @@ char	*ft_strdup(const char *s)
 	char	*str;
 
 	arr_len = ft_strlen(s);
-	str = malloc(arr_len);
+	str = (char *)malloc(sizeof(char) * (arr_len + 1));
 	if (str == NULL)
 		return (NULL);
-	ft_memcpy(str, s, arr_len);
+	ft_memcpy(str, s, arr_len + 1);
 	return (str);
 }

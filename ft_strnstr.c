@@ -12,6 +12,25 @@
 
 #include "libft.h"
 
+static size_t	find_my_keyword(char *now, const char *little)
+{
+	int	i;
+
+	i = 0;
+	while (little[i])
+	{
+		if (now[i] == little[i])
+		{
+			i++;
+		}
+		else
+		{
+			return (0);
+		}
+	}
+	return (i);
+}
+
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
@@ -20,14 +39,15 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	i = 0;
 	len_little = ft_strlen(little);
 	if (len_little == 0)
-	{
 		return ((char *)big);
-	}
-	if (!(len == 0))
+	if (len < len_little)
+		return (NULL);
+	if (len != 0)
 	{
-		while (i <= (len - len_little) && big[i] != '\0')
+		while (i <= (len - len_little)
+			&& big[i])
 		{
-			if (!(ft_strncmp(big, little, len_little)))
+			if (find_my_keyword((char *)&big[i], little) == len_little)
 			{
 				return ((char *)&big[i]);
 			}

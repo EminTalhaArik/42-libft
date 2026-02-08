@@ -18,9 +18,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*str;
 
-	str = malloc(len);
+	if (start >= ft_strlen(s))
+		return (ft_strdup(""));
+	if (len > ft_strlen(s) - start)
+		len = ft_strlen(s) - start;
+	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (str == NULL)
 		return (NULL);
-	ft_memcpy(str, &s[start], len);
+	ft_memcpy(str, &s[start], len + 1);
+	str[len] = '\0';
 	return (str);
 }
