@@ -6,7 +6,7 @@
 /*   By: emiarik <emiarik@student.42kocaeli.com.tr  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/17 17:49:18 by emiarik           #+#    #+#             */
-/*   Updated: 2026/02/08 03:21:37 by emiarik          ###   ########.fr       */
+/*   Updated: 2026/02/08 03:43:46 by emiarik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,7 @@ void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putchar_fd(char c, int fd);
 
 #endif

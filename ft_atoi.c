@@ -6,7 +6,7 @@
 /*   By: emiarik <emiarik@student.42kocaeli.com.tr  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 04:21:12 by emiarik           #+#    #+#             */
-/*   Updated: 2026/02/01 01:45:39 by emiarik          ###   ########.fr       */
+/*   Updated: 2026/02/08 03:57:14 by emiarik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ int	ft_atoi(const char *nptr)
 	sign = 1;
 	result = 0;
 	i = 0;
-	while ((nptr[i] == ' ' || nptr[i] >= 7) && (nptr[i] <= 13))
+	while ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] <= 32)
 	{
 		i++;
 	}
-	while (nptr[i] == '+' || nptr[i] == '-')
+	if (nptr[i] == '+' || nptr[i] == '-')
 	{
 		if (nptr[i] == '-')
 			sign *= -1;
@@ -38,5 +38,5 @@ int	ft_atoi(const char *nptr)
 		i++;
 	}
 	result = result * sign;
-	return (result);
+	return ((int) result);
 }

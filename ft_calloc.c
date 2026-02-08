@@ -6,7 +6,7 @@
 /*   By: emiarik <emiarik@student.42kocaeli.com.tr  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 01:20:43 by emiarik           #+#    #+#             */
-/*   Updated: 2026/02/01 01:34:35 by emiarik          ###   ########.fr       */
+/*   Updated: 2026/02/08 04:26:09 by emiarik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	void	*s;
 
 	total_count = nmemb * size;
-	if (nmemb != 0 && total_count / nmemb == size)
+	if (nmemb != 0 && total_count / nmemb != size)
 		return (NULL);
 	s = malloc(total_count);
 	if (s == NULL)
