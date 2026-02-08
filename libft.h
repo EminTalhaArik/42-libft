@@ -6,7 +6,7 @@
 /*   By: emiarik <emiarik@student.42kocaeli.com.tr  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/17 17:49:18 by emiarik           #+#    #+#             */
-/*   Updated: 2026/02/08 05:12:48 by emiarik          ###   ########.fr       */
+/*   Updated: 2026/02/08 06:40:29 by emiarik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,12 +63,12 @@ void	ft_lstadd_front(t_list **lst, t_list *new);
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_listiter(t_list *lst, void (*f)(void *));
-void	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 t_list	*ft_lstnew(void *content);
-t_list	*ft_lstlast(t_list *last);
+t_list	*ft_lstlast(t_list *lst);
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif

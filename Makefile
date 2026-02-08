@@ -1,6 +1,6 @@
 NAME = libft.a
 FLAG = -Wall -Wextra -Werror
-SRC = $(shell find . ! -name "ft_lst*.c" -name "ft_*.c")
+SRC = $(shell find . -name "ft_*.c")
 OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
