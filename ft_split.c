@@ -6,7 +6,7 @@
 /*   By: emiarik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 03:20:48 by emiarik           #+#    #+#             */
-/*   Updated: 2026/02/08 03:21:05 by emiarik          ###   ########.fr       */
+/*   Updated: 2026/02/08 15:47:21 by emiarik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,16 +66,14 @@ char	**ft_split(char const *s, char c)
 {
 	char	**array;
 	size_t	i;
-	size_t	word_count;
 
 	if (!s)
 		return (NULL);
-	word_count = count_words(s, c);
-	array = (char **)malloc(sizeof(char *) * (word_count + 1));
+	array = (char **)malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (!array)
 		return (NULL);
 	i = 0;
-	while (i < word_count)
+	while (i < count_words(s, c))
 	{
 		while (*s == c)
 			s++;

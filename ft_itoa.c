@@ -6,7 +6,7 @@
 /*   By: emiarik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 04:26:39 by emiarik           #+#    #+#             */
-/*   Updated: 2026/02/08 04:56:30 by emiarik          ###   ########.fr       */
+/*   Updated: 2026/02/08 15:20:35 by emiarik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,11 +65,4 @@ char	*ft_itoa(int n)
 	if (n < 0)
 		str[0] = '-';
 	return (str);
-}
-
-#include <stdio.h>
-
-int main()
-{
-	printf("%s", ft_itoa(-97321));
 }
