@@ -6,7 +6,7 @@
 /*   By: emiarik <emiarik@student.42kocaeli.com.tr  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/17 17:49:18 by emiarik           #+#    #+#             */
-/*   Updated: 2026/02/01 02:39:35 by emiarik          ###   ########.fr       */
+/*   Updated: 2026/02/08 03:21:37 by emiarik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@
 
 # include <stddef.h>
 
-typedef struct	s_list
+typedef struct s_list
 {
-	void		*content;
+	void			*content;
 	struct s_list	*next;
-}
+}	t_list;
 
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
