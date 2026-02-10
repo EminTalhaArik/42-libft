@@ -31,22 +31,22 @@ static size_t	find_my_keyword(char *now, const char *little)
 	return (i);
 }
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
 	size_t	len_little;
 
 	i = 0;
-	len_little = ft_strlen(little);
+	len_little = ft_strlen(needle);
 	if (len_little == 0)
-		return ((char *)big);
+		return ((char *)haystack);
 	if (len != 0)
 	{
-		while (big[i] && (i + len_little) <= len)
+		while (haystack[i] && (i + len_little) <= len)
 		{
-			if (find_my_keyword((char *)&big[i], little) == len_little)
+			if (find_my_keyword((char *)&haystack[i], needle) == len_little)
 			{
-				return ((char *)&big[i]);
+				return ((char *)&haystack[i]);
 			}
 			i++;
 		}

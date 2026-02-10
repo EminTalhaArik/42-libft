@@ -14,15 +14,15 @@
 #include <stddef.h>
 #include <stdlib.h>
 
-char	*ft_strdup(const char *s)
+char	*ft_strdup(const char *s1)
 {
 	size_t	arr_len;
 	char	*str;
 
-	arr_len = ft_strlen(s);
+	arr_len = ft_strlen(s1);
 	str = (char *)malloc(sizeof(char) * (arr_len + 1));
 	if (str == NULL)
 		return (NULL);
-	ft_memcpy(str, s, arr_len + 1);
+	ft_memcpy(str, s1, arr_len + 1);
 	return (str);
 }

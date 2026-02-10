@@ -1,17 +1,29 @@
 NAME = libft.a
-FLAG = -Wall -Wextra -Werror
-SRC = $(shell find . -name "ft_*.c")
-OBJ = $(SRC:.c=.o)
+FLAGS = -Wall -Wextra -Werror
+
+SRCS        = $(shell find . -maxdepth 1 -name "ft_*.c" ! -name "ft_lst*.c")
+BONUS_SRCS  = $(shell find . -maxdepth 1 -name "ft_lst*.c")
+
+OBJS        = $(SRCS:.c=.o)
+BONUS_OBJS  = $(BONUS_SRCS:.c=.o)
 
 all: $(NAME)
 
-$(NAME):
-	gcc $(FLAG) -c $(SRC)
-	ar rc $(NAME) *.o
+$(NAME): $(OBJS)
+	ar rcs $(NAME) $(OBJS)
+
+bonus: $(OBJS) $(BONUS_OBJS)
+	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+
+%.o: %.c
+	$(CC) $(FLAGS) -c $< -o $@
+
 clean:
-	/bin/rm -f  *.o
+	rm -f $(OBJS) $(BONUS_OBJS)
+
 fclean: clean
-	/bin/rm -f $(NAME)
+	rm -f $(NAME)
+
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all bonus clean fclean re

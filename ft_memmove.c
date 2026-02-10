@@ -13,14 +13,14 @@
 #include <stddef.h>
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	unsigned char		*dst_org;
 	const unsigned char	*src_org;
 
-	if (!dest && !src)
+	if (!dst && !src)
 		return (NULL);
-	dst_org = (unsigned char *)dest;
+	dst_org = (unsigned char *)dst;
 	src_org = (const unsigned char *)src;
 	if (dst_org > src_org)
 	{
@@ -32,7 +32,7 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 	}
 	else
 	{
-		ft_memcpy(dest, src, len);
+		ft_memcpy(dst, src, len);
 	}
-	return (dest);
+	return (dst);
 }
