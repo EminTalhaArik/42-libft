@@ -6,12 +6,11 @@
 /*   By: emiarik <emiarik@student.42kocaeli.com.tr  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 01:20:43 by emiarik           #+#    #+#             */
-/*   Updated: 2026/02/08 04:26:09 by emiarik          ###   ########.fr       */
+/*   Updated: 2026/02/12 20:33:31 by emiarik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 #include <stdlib.h>
 
 void	*ft_calloc(size_t nmemb, size_t size)
