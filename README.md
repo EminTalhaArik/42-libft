@@ -1,19 +1,16 @@
+*This project has been created as part of the 42 curriculum by emiarik*
+
 # 42 Libft Project
 
-## Introduction
-iThis project is an essential part of the 42 curriculum. The goal is to re-implement a series of standard C library functions, as well as some additional utility functions, to build a foundational understanding of C programming and data structures.
+## Açıklama
+Bu proje 42 Kocaeli okulu ana eğitim programı kapsamında hazırlanmış olup, okulun ilk projesidir. Proje içerisinde C dili ile kendi kütüphane projemizi geliştirmiş durumdayız.
 
-## What is Libft?
-Libft is a personal library that you'll build throughout your journey at 42. It contains a set of custom-made functions that replicate the behavior of functions from the standard C library (`libc`), along with other useful functions that are not part of `libc`. This project is designed to teach you about:
-*   Understanding how standard library functions work under the hood.
-*   Manipulating memory and strings.
-*   Writing clean, efficient, and well-documented C code.
-*   The importance of creating your own reusable tools.
+## Libft ile ne yapılabilir?
+Libft kendi kişisel kütüphanemizdir. Kütüphane içerisinde dynamic veri yönetimi, temel string manipülasyonları ve kontrolleri, Linked List yönetimi ve FD Write fonksiyonları ile dosya yönetimi işlemlerini gerçekleştirebilmekteyiz. 
 
+## İçerideki fonksiyonlar
 
-## Implemented Functions
-
-### Part 1 - Libc Functions
+### Part 1 - Libc Fonksiyonları
 *   `ft_isalpha`
 *   `ft_isdigit`
 *   `ft_isalnum`
@@ -38,39 +35,52 @@ Libft is a personal library that you'll build throughout your journey at 42. It 
 *   `ft_calloc`
 *   `ft_strdup`
 
-### Part 2 - Additional Functions
+### Part 2 - Ek Fonksiyonlar
 *   `ft_substr`
 *   `ft_strjoin`
 *   `ft_strtrim`
-*   ... (Add more functions as you implement them)
+*   `ft_split`
+*   `ft_lstnew`
+*   `ft_lstclear`
+*   `ft_lstadd_back`
+*   `ft_lstadd_front`
+*   `ft_lstdelone`
+*   `ft_lstiter`
+*   `ft_lstlast`
+*   `ft_lstmap`
+*   `ft_lstsize`
+*   `ft_putchar_fd`
+*   `ft_putendl_fd`
+*   `ft_putnbr_fd`
+*   `ft_putstr_fd`
 
+## Nasıl kullanabilirsiniz?
+Libft kütüphanesini kullanabilmek için aşağıdaki adımları takip edebilirsiniz.
 
-## How to Use
-To use the `libft` library in your projects, you need to compile it first:
-
-1.  Clone the repository:
+1.  Repo'yu clone edin.
     ```bash
-    git clone https://github.com/your_username/42-libft.git
+    git clone https://github.com/EminTalhaArik/42-libft.git
     cd 42-libft
     ```
-2.  Compile the library:
+2.  Kütüphaneyi derleiyn:
     ```bash
     make
     ```
-    This will create a static library file named `libft.a`.
+    Bu işlemin ardından sistem size otomatik olarak `libft.a` dosyasını oluşturacak.
 
-3.  Include `libft.h` in your C source files and link with `libft.a` during compilation:
+3.  Bu işlemin ardından kütüphanede yer alan fonksiyonlardan bir tanesini kullanmak istediğiniz C dosyası içerisinde `libft.h` include edebilirsiniz. Bu dosyaları derleme işlemi esnasında `libft.a` ile linkleyerek derleyebilirsiniz:
     ```bash
-    gcc -Wall -Wextra -Werror your_program.c -L. -lft -o your_program
-    ```
-    Or, if `libft.a` is in a different directory (e.g., `path/to/libft`):
-    ```bash
-    gcc -Wall -Wextra -Werror your_program.c -Ipath/to/libft -Lpath/to/libft -lft -o your_program
+    gcc -Wall -Wextra -Werror your_program.c libft.a -o your_program
     ```
 
-
-## Author
+## Yazar
 [Emin](https://github.com/EminTalhaArik)
 
-## License
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details (if you choose to add one).
+## Kaynakça
+
+Projeyi geliştirme sürecimde bazı konuları netleştirebilmek için yapay zekadan destek aldım. Bu süreçte Gemini AI ile muhabbetimizi samimi bir noktaya getirdim. Bu süreçte link olarak daha sonrasında ulaşamadığım bir çok kaynağa geeksforgeeks web sayfası üzerinden eriştim.
+
+*   `https://www.cs.cornell.edu/courses/cs3410/2024fa/rsrc/c/header.html`
+*   `https://medium.com/@beingnile/stack-and-heap-25ada76c1b61`
+*   `https://www.geeksforgeeks.org/c/dynamic-memory-allocation-in-c-using-malloc-calloc-free-and-realloc/`
+*   `https://www.geeksforgeeks.org/c/linked-list-in-c/`
